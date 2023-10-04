@@ -5,7 +5,7 @@ class FireStoreController {
   FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
 
   Future<void> addStudent() async {
-    firebaseFirestore.collection("Student").add({
+   await firebaseFirestore.collection("Student").add({
       "name": "ahmad",
       "email": "ahmad@gmail.com",
       "password": "123456",

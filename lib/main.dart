@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:task/firebase/firestore.dart';
 import 'package:task/screen/TowScreen.dart';
 import 'firebase_options.dart';
 
@@ -9,6 +10,8 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   runApp(const MyApp());
+  FireStoreController fireStoreController =FireStoreController();
+  fireStoreController.addStudent();
 }
 
 class MyApp extends StatelessWidget {
